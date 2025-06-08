@@ -1,0 +1,36 @@
+/* Container for the user dashboard */
+.user-dashboard-container {
+  padding: 20px;
+  text-align: center;
+  background-color: #e6ffe6; /* Light green background */
+  min-height: 100vh;
+}
+
+/* Heading for the dashboard */
+.user-dashboard-heading {
+  color: #28a745; /* Green color for heading */
+  margin-bottom: 15px;
+}
+
+/* Welcome message */
+.user-dashboard-message {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Go to Home button */
+.user-dashboard-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-dashboard-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}

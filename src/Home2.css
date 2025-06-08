@@ -1,0 +1,310 @@
+/* Container for the entire page */
+.movie-details-page-container {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f5f5f5; /* Light background to match the image */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styling */
+.movie-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff; /* White header background */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.movie-details-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #d81f26; /* Red color for the logo */
+  letter-spacing: 1px;
+}
+
+.movie-details-nav-links span {
+  margin: 0 20px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.movie-details-nav-links span:hover {
+  color: #d81f26;
+}
+
+.movie-details-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.movie-details-location-dropdown {
+  background-color: #f9f9f9;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 18px;
+  padding-right: 30px;
+  transition: border-color 0.3s ease;
+}
+
+.movie-details-location-dropdown:focus {
+  outline: none;
+  border-color: #d81f26;
+  box-shadow: 0 0 5px rgba(216, 31, 38, 0.3);
+}
+
+/* Wrapper to center the movie details section */
+.movie-details-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Movie details section */
+.movie-details {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #fff; /* White background to match the image */
+  color: #333; /* Dark text for contrast */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  max-width: 900px; /* Limit width for better centering */
+  width: 100%;
+  position: relative;
+}
+
+.movie-poster img {
+  width: 220px;
+  height: 330px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.movie-poster img:hover {
+  transform: scale(1.05);
+}
+
+.movie-info {
+  flex: 1;
+}
+
+.movie-info h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.rating span {
+  font-size: 16px;
+  color: #333;
+}
+
+.movie-details-rate-btn {
+  background-color: transparent;
+  border: none;
+  color: #555;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.movie-details-rate-btn:hover {
+  color: #d81f26;
+}
+
+.movie-details-user-rating {
+  font-style: italic;
+  color: #f1c40f;
+}
+
+.details span {
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 15px;
+  margin-right: 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.meta span {
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+  color: #666;
+}
+
+.movie-details-book-tickets-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #d81f26; /* Red button to match the image */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.movie-details-book-tickets-btn:hover {
+  background-color: #a7141a;
+}
+
+.movie-details-in-cinemas {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #90ee90; /* Light green to match the image */
+  font-weight: 500;
+}
+
+/* Share Button */
+.movie-details-share {
+  margin-top: 20px;
+  margin-left: auto; /* Align to the right */
+}
+
+.movie-details-share-btn {
+  background-color: #333;
+  border: 1px solid #666;
+  padding: 8px 14px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.movie-details-share-btn:hover {
+  background-color: #444;
+}
+
+/* About Section */
+.movie-details-about-movie {
+  margin: 30px 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Match the movie details width */
+  width: calc(100% - 40px); /* Adjust for margin */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.movie-details-about-movie h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.movie-details-about-movie p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Rating Popup */
+.movie-details-rating-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.movie-details-rating-popup {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.movie-details-stars {
+  margin: 15px 0;
+}
+
+.movie-details-star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.movie-details-star.filled {
+  color: gold;
+}
+
+.movie-details-rating-actions button {
+  margin: 0 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.movie-details-submit-rating-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.movie-details-cancel-rating-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .movie-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movie-poster img {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .movie-details-share {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,177 @@
+/* Fullscreen container setup with the new background image */
+.home-container {
+    background-image: url('/c0a43ca9-97ba-48ca-aea5-6b663572ae85.png'); /* Adjust based on actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1c2526;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 5%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glassmorphic search box */
+.search-box {
+    background: rgba(28, 37, 38, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+}
+
+.search-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.search-box h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ff4d4d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.search-box p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    opacity: 0.9;
+    color: #e0e0e0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 0.9; transform: translateY(0); }
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: rgba(34, 34, 34, 0.8);
+    color: white;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #ff4d4d;
+    box-shadow: 0 0 12px rgba(255, 77, 77, 0.5);
+    transform: scale(1.02);
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 250, 0.5);
+    font-weight: 400;
+    font-style: italic;
+}
+
+.search-box button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    margin-top: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #e63939;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.7);
+}
+
+/* Poster section */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.image-row:first-child,
+.image-row:nth-child(2) {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    animation: slideIn 1s ease-out;
+}
+
+.image-row:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+.movie-image {
+    width: 160px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #ff4d4d;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-image:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
+    border-color: #ff6666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-container {
+        padding: 20px;
+        height: auto;
+    }
+
+    .search-box {
+        width: 80%;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+    }
+
+    .image-container {
+        align-items: center;
+    }
+
+    .image-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

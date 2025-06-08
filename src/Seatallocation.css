@@ -1,0 +1,221 @@
+.seat-allocation-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.seat-header {
+    margin-bottom: 30px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-left {
+    text-align: left;
+    max-width: 70%;
+}
+
+.header-left h1 {
+    font-size: 30px;
+    color: #222;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.header-left p {
+    font-size: 17px;
+    color: #555;
+    margin: 0;
+}
+
+.header-right {
+    text-align: right;
+    min-width: 220px;
+}
+
+.ticket-cost,
+.total-cost {
+    font-size: 17px;
+    color: #222;
+    margin: 6px 0;
+}
+
+.total-cost {
+    font-weight: 700;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #333;
+}
+
+.selected-count {
+    font-size: 17px;
+    color: #222;
+}
+
+.seat-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.seat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+.seat-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 7px;
+}
+
+.row-label {
+    width: 32px;
+    text-align: center;
+    font-weight: 700;
+    color: #444;
+    user-select: none;
+}
+
+.seat {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1.8px solid #bbb;
+    transition: background-color 0.25s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.seat.available {
+    background-color: #444;
+    color: #fff;
+}
+
+.seat.reserved {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+.seat.selected {
+    background-color: #28a745;
+    color: #fff;
+    transform: scale(1.15);
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.7);
+    border-color: #28a745;
+}
+
+.seat:hover.available {
+    background-color: #666;
+    transform: scale(1.08);
+}
+
+.animate-selection {
+    animation: pulse 0.4s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1.15); }
+}
+
+.column-labels {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+    justify-content: space-around;
+    user-select: none;
+}
+
+.column-labels span {
+    width: 34px;
+    text-align: center;
+    font-size: 13px;
+    color: #444;
+}
+
+.screen {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.screen-text {
+    background-color: #ddd;
+    color: #333;
+    padding: 12px 0;
+    width: 55%;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 17px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-section {
+    text-align: center;
+    margin-top: 38px;
+}
+
+.confirm-btn {
+    padding: 14px 40px;
+    background: linear-gradient(90deg, #0069d9, #004a9f);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background: linear-gradient(90deg, #004a9f, #003060);
+    transform: scale(1.07);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.18);
+}
+
+.confirm-btn:active {
+    transform: scale(0.95);
+    animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1.07); }
+    100% { transform: scale(1); }
+}
